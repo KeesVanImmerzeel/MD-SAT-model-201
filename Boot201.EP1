@@ -1,0 +1,25 @@
+************* EParray[ 1 ]: TestFile KINNUM **********
+1             Aantal tijdsonafhankelijke tabellen: (=xInDep)
+0             ***table 0: table-type 0 (no interpolation) 
+-60           rows, columns UITVOERTIJDSTIPPEN (d)
+0 15
+6             Aantal tijdsafhankelijk (xy)-tabellen (=xDep)******************
+0             table 0: table-type 0 (no interpolation)
+1             RP1 (Q): Toestroming naar berging voor de sluis (m/d)
+0 0
+0             table 1: table-type 0 (no interpolation)
+1             RP2 (Ws1_gewenst): Gewenste binnenwaterstand (m+NAP)
+0 -0.20
+0             table 2: table-type 0 (no interpolation)
+1             RP3 (Ws1_Init): Initiele binnenwaterstand (m+NAP)
+0 -0.20
+0             table 3: table-type 0 (no interpolation)
+1             RP4 (SbCode): Stuwbeheer-code (-)
+0 1
+0             table 4: table-type 0 (no interpolation)
+1             RP5 (Kwel): Kwel (m/d)
+0 0.00063
+0             table 5: table-type 0 (no interpolation)
+1             RP6 (PumpCapacity): pompcapaciteit (m/d)
+0 0.0
+

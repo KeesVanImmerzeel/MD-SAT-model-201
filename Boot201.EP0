@@ -1,0 +1,129 @@
+************* EParray[ cEP0 ]: DefaultBootFile KINNUM ***************************
+10     Aantal tijdsonafhankelijke tabellen: == 2! (=xInDep)
+0     ***table 0: table-type 0 (no interpolation)
+20 1  ***table 0: cNr_TINTode_Create_Settings (rows), 1 columns
+1              1:  IAlgRout      Algorithm-routine for integration(1=Euler)
+1              2:  IStepRout     Stepper-routine for integration(1=CrudeStep)
+0              3:  IDCRoot       Functie voor het insluiten van een discontinuiteit
+0              4:  IDCStepRout   Stepper-routine voor modellen met discontinuiteiten
+1              5:  IDriver       Driver-routine for integration
+1              6:  I_nsubstep    Aantal sub-stappen in sommige algorithme-routines
+8              7:  I_nstep       Aantal sub-stappen in sommige stepper-routines
+1000           8:  I_maxstp      Max. aantal stappen idem
+0.1            9:  I_htry        Initiele stapgrootte
+0.001          10: I_hmin        Minimale stapgrootte
+0.01           11: I_eps         Tolerantie
+0              12: cModelID               * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0              13: ReadyToRun             * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0              14: cNrOfRPs               * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0              15: cNrOfSQRQs             * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0              16: cNrOfAvSpeedsToExport  * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+1              17: Area (m2): wordt in Shell-omgeving vervangen door Shell-waarde
+0              18: Current_xs             * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0              19: nDC                    * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0              20: GERESERVEERD
+0    ***table 1: table-type 0 (no interpolation) 
+5 11 ***table 1: NrOfDepVar (rows), cNrOfDepVarOptions columns;  
+0   0 0 0 0 0    1 1 1 1 1 ystart[ 1 ];  1: {-Berging in waterlopen en op maaiveld (m)}
+0   2 0 0 0 0    1 1 1 1 1 ystart[ 2 ];  2: {-Gem afvoer door stuw (m/d)}
+0   2 0 0 0 0    1 1 1 1 1 ystart[ 3 ];  3: {-Gem. binnenwaterstand Ws1 (m+NAP)}
+0   0 0 0 0 0    1 1 1 1 1 ystart[ 4 ];  4: {-Gem. kwel naar berging (m/d)}
+0   0 0 0 0 0    1 1 1 1 1 ystart[ 5 ];  5: {-Gem. maalhoeveelheid (m/d)}
+0    ***table 2: table-type 0 (no interpolation) 
+2 8  ***Min/max key/init-values 
+-0.010 0.100   -0.65 0.35   1 2   1.90 0 1-2:Toestr. naar stuw Q m/d; 3-4:Kr; 5-6:SbCode; 7:H1Max (=max. overstorthoogte (m); 8: (-)
+-0.010 0.010    0.00 0.50   0 0   0    0 1-2:Kwel (m/d); 3-4:Pompcap. (m/d); 5-8: (-)
+0    ***table 3: table-type 0 (no interpolation) 
+1 4  ***Par. vr. de beschr. vd. buitenwaterstand (Ws2, (m+NAP); M.U.V. DE GEMIDDELDE BUITENWATERSTAND!; zie 'eb en vloed.xls'
+0.94 0.516666666666667 0 -0.45 1:Amplitude (Ampl, m); 2:Periode (Period, d); 3:Offset t0 (d); 4:Onderbegrenzing (Ws2Min, m+NAP)
+0     ***table 4: table-type 0 (Wordt in DsModel201 omgezet naar type TxyTableLinInt) 
+6 2   ***Beschrijving van de relatie tussen de berging (Berging, (m)) en de binnenwaterstand (Ws1, (m+NAP))
+0.000000 -2.00 Kolom 1: Berging (m); Kolom 2: Binnenwaterstand (m+NAP)
+0.009902  0.00
+0.012418  0.20
+0.117682  0.70
+0.665700  1.50
+0.902629  2.00
+2      ***table 5: table-type 2 (Linear interpolation)
+27 10  ***Karakteristieke afvoercoefficient Cd (Cd(-)=f(kruinvorm,klephoek en h1)) Deze waarden zijn voor paraboolvormige kruinen P5 
+-9911      30    37.5      45    52.5      60    67.5      75      80      90  Rij: Overstorthoogte h1 (m); Kolom: klephoek (Gr)
+0.000   1.266   1.078   0.841   0.866   0.892   0.928   0.938   0.792   0.500  -9911: Cd waarde onbekend bij deze combinatie (klephoek, overstorthoogte h1)
+0.030   1.261   1.098   0.945   0.943   0.961   0.986   0.998   0.9     0.635 
+0.050   1.256   1.117   0.988   0.99    1.006   1.028   1.034   0.977   0.720 
+0.100   1.250   1.158   1.090   1.062   1.071   1.084   1.090   1.061   0.840 
+0.150   1.246   1.182   1.125   1.109   1.110   1.119   1.126   1.091   0.900 
+0.200   1.245   1.201   1.150   1.139   1.140   1.145   1.146   1.111   0.930 
+0.250   1.246   1.216   1.173   1.161   1.162   1.165   1.160   1.126   0.955 
+0.300   1.249   1.230   1.194   1.181   1.182   1.181   1.174   1.137   0.975 
+0.350   1.252   1.239   1.212   1.200   1.200   1.195   1.185   1.145   0.990 
+0.400   1.255   1.248   1.227   1.215   1.215   1.209   1.195   1.152   1.000 
+0.450   1.261   1.254   1.239   1.230   1.229   1.220   1.204   1.156   1.010 
+0.500   1.266   1.261   1.248   1.243   1.240   1.230   1.212   1.161   1.015 
+0.600   1.275   1.271   1.262   1.264   1.260   1.246   1.223   1.168   1.020 
+0.700   1.280   1.277   1.271   1.278   1.275   1.261   1.230   1.171   1.025 
+0.800   1.281   1.281   1.278   1.278   1.289   1.271   1.232   1.172   1.030 
+0.900   1.280   1.283   1.282   1.294   1.295   1.275   1.230   1.171   1.030 
+1.000   1.278   1.284   1.284   1.296   1.298   1.276   1.225   1.169   1.030 
+1.100   1.273   1.284   1.285   1.297   1.299   1.276   1.218   1.165   1.035 
+1.200   1.268   1.282   1.285   1.296   1.299   1.276   1.211   1.161   1.035 
+1.300   1.266   1.280   1.283   1.294   1.298   1.276   1.205   1.158   1.035 
+1.400   1.261   1.275   1.281   1.290   1.297   1.275   1.199   1.154   1.035 
+1.500   -9911   1.270   1.280   1.288   1.296   1.275   1.193   1.151   1.035 
+1.600   -9911   -9911   1.279   1.285   1.293   1.275   1.185   1.147   1.035 
+1.700   -9911   -9911   1.277   1.281   1.290   1.274   1.175   1.141   1.040 
+1.800   -9911   -9911   1.275   1.276   1.287   1.274   1.168   1.135   1.040 
+1.900   -9911   -9911   -9911   1.273   1.284   1.273   1.158   1.129   1.040
+2      ***table 6: table-type 2 (Linear interpolation) 
+26 8   ***Contractiefactor cA (-) voor kleppen met paraboolvormige kruinen en niet-afgeronde ophangarmen. 
+-9912   37.5  45    52.5  60    67.5  75    82.5  Rij: verhouding h1/B(m); Kolom: klephoek (Gr)
+0.000  1.000 1.000 1.000 1.000 1.000 1.000 1.000  Met: h1=Overstorthoogte (m); B=breedte tussen de betonwanden (m)      
+0.002  1.000 1.000 1.000 0.998 0.976 0.860 0.495  -9912: cA waarde onbekend bij deze combinatie (klephoek, verhouding h1/B)
+0.005  1.000 1.000 1.000 0.988 0.944 0.730 0.250  
+0.008  1.000 1.000 1.000 0.980 0.906 0.638 0.150  
+0.010  1.000 1.000 1.000 0.874 0.885 0.590 0.135     
+0.020  1.000 1.000 0.995 0.890 0.701 0.400 0.091     
+0.030  1.000 1.000 0.973 0.780 0.540 0.289 0.082     
+0.040  1.000 0.990 0.933 0.655 0.423 0.222 0.078     
+0.050  1.000 0.950 0.866 0.558 0.340 0.182 0.072     
+0.060  1.000 0.887 0.772 0.485 0.291 0.163 0.069     
+0.070  1.000 0.817 0.667 0.435 0.269 0.154 0.069     
+0.080  0.955 0.744 0.592 0.400 0.253 0.148 0.068    
+0.090  0.905 0.675 0.535 0.370 0.242 0.140 0.069    
+0.100  0.845 0.622 0.495 0.350 0.239 0.139 0.071    
+0.110  0.775 0.570 0.470 0.338 0.239 0.139 0.075    
+0.120  0.700 0.532 0.450 0.329 0.241 0.139 0.078    
+0.130  0.650 0.510 0.438 0.327 0.246 0.139 0.080    
+0.140  0.615 0.499 0.432 0.327 0.251 0.139 0.082    
+0.150  0.595 0.498 0.432 0.328 0.255 0.139 0.085    
+0.160  0.589 0.500 0.435 0.330 0.259 0.141 0.088     
+0.170  0.589 0.502 0.440 0.330 0.265 0.145 0.091     
+0.180  0.592 0.504 0.443 0.330 0.269 0.150 0.095     
+0.190  0.595 0.506 0.447 0.330 0.272 0.155 0.099     
+0.200  0.598 0.508 0.450 0.330 0.276 0.162 0.102     
+0.700  0.605 0.515 0.455 0.335 0.282 0.170 0.110     
+2      ***table 7: table-type 2 (Linear interpolation) 
+13 7   *** Reductiefactor voor gestuwde afvoer (Cdr, (-)).
+-9913    30     45     60     75   82.5    90   Rij: Verdrinkingsgraad (S, %), =100.h2/h1; Kolom: klephoek (Gr)
+ 0    1.000  1.000  1.000  1.000  1.000  1.000  Met h2=Benedenwaterstand t.o.v. de kruin (m)
+10    0.979  0.982  0.985  0.990  0.994  0.995  -9913: Cdr niet bekend bij deze combinatie (klephoek, verdrinkingsgraad)
+20    0.964  0.967  0.973  0.980  0.985  0.988      
+30    0.942  0.947  0.954  0.965  0.975  0.979      
+40    0.915  0.922  0.931  0.946  0.961  0.967      
+50    0.881  0.888  0.900  0.919  0.941  0.948      
+60    0.832  0.842  0.856  0.879  0.908  0.918      
+70    0.761  0.775  0.795  0.822  0.854  0.866      
+80    0.655  0.667  0.701  0.735  0.767  0.782      
+85    0.582  0.604  0.634  0.676  0.706  0.720      
+90    0.478  0.532  0.553  0.585  0.610  0.632      
+95    0.420  0.421  0.422  0.436  0.455  0.476      
+0    ***table 8: table-type 0 (no interpolation) 
+1 5  ***Overige parameters voor de beschrijving van de stuw
+1.0 2.10 1 0.105 6473636.9  1:Coef.vr de aanloopsnelh.(-); 2:Breedte stuw(m); 3:Aantal ophangarmen(-); 4:Breedte v.d ophangarm (m); 5: Afw.Oppervlak (m2)=5473636.9+1000000
+0    ***table 9: table-type 0 (no interpolation) 
+2 5 {-Parameters voor het beschrijven van het stuwbeheer}
+0.00 0.05 0.0 0.0 0.0  Sb1 (gebruik max.capaciteit): DeltaWs1 (m); MinWsDif (m)
+0.00 0.00 0.0 0.0 0.0  Sb2 (stuw is gesloten; parameters hebben geen betekenis)
+1             Aantal tijdsafhankelijk (xy)-tabellen **********************************
+0             table 0: table-type 0 (no interpolation)
+1             Gem.buitenwaterst. (Ws2Av, m+NAP)
+0 -0.03
